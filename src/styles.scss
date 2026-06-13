@@ -11,3 +11,13 @@ html, body {
 * {
   box-sizing: border-box;
 }
+
+/* Ensure autocomplete dropdown renders above all page content and is fully opaque */
+.cdk-overlay-container {
+  z-index: 1000;
+}
+
+.mat-mdc-autocomplete-panel {
+  background: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18) !important;
+}

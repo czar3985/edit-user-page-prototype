@@ -3,7 +3,9 @@
     <input (input)="onInput($any($event.target).value)" [formControl]="control" [matAutocomplete]="locationAutocomplete"
            aria-describedby="typeaheadHint" matInput/>
     <mat-icon matSuffix>search</mat-icon>
-    <mat-hint id="typeaheadHint">Type at least 3 characters to search. More results load as you scroll.</mat-hint>
+    <mat-hint id="typeaheadHint">Type at least 3 characters to search. More results load as you scroll.@if (additionalHint) {
+        <span class="additional-hint"> {{ additionalHint }}</span>
+    }</mat-hint>
     <mat-autocomplete #locationAutocomplete="matAutocomplete" (optionSelected)="onSelected($event)"
                       [displayWith]="displayLocation">
         @for (option of options; track option.id) {

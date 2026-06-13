@@ -19,6 +19,7 @@ export class LocationTypeaheadComponent {
     @Input() label = 'Location';
     @Input() options: LocationSearchItem[] = [];
     @Input() selectableWithCheckbox = false;
+    @Input() additionalHint = '';
     @Output() searchChanged = new EventEmitter<string>();
     @Output() optionSelected = new EventEmitter<LocationSearchItem>();
     @Output() optionToggled = new EventEmitter<{ option: LocationSearchItem; linked: boolean }>();

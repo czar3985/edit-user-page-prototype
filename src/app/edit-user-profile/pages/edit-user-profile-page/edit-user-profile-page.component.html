@@ -36,6 +36,7 @@
                                             (searchChanged)="facade.queueAccessibleSearch($event)"
                                             [control]="form.controls.accessibleLocationSearch" [options]="state.accessibleLocationOptions"
                                             [selectableWithCheckbox]="true"
+                                            additionalHint="A sub location can only be selected if the parent location is selected."
                                             label="Search accessible locations"/>
                     <app-accessible-locations-table (pageChanged)="facade.loadGroupedLocations($event.pageIndex, $event.pageSize)"
                                                     (sublocationToggled)="facade.toggleAccessibleLocation($event.locationId, $event.linked)"
