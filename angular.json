@@ -54,6 +54,18 @@
           },
           "defaultConfiguration": "production"
         },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "edit-user-page-prototype:build:production"
+            },
+            "development": {
+              "buildTarget": "edit-user-page-prototype:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
