@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
 
-@Component({ selector: 'app-root', template: '<router-outlet />', imports: [RouterOutlet] })
-export class AppComponent {}
+@Component({selector: 'app-root', template: '<router-outlet />', imports: [RouterOutlet]})
+export class AppComponent {
+}
