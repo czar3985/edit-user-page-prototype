@@ -35,9 +35,9 @@ const initialState: EditUserProfileState = {
 
 @Injectable()
 export class EditUserProfileFacade {
-    readonly title$ = this.state$.pipe(map((s) => s.user ? `Editing ${s.user.firstName} ${s.user.lastName}'s Profile` : 'Editing User Profile'));
     private readonly stateSubject = new BehaviorSubject<EditUserProfileState>(initialState);
     readonly state$ = this.stateSubject.asObservable();
+    readonly title$ = this.state$.pipe(map((s) => s.user ? `Editing ${s.user.firstName} ${s.user.lastName}'s Profile` : 'Editing User Profile'));
     private readonly primarySearch$ = new Subject<{ searchString: string; skip: number; take: number }>();
     private readonly accessibleSearch$ = new Subject<{ searchString: string; skip: number; take: number }>();
 
