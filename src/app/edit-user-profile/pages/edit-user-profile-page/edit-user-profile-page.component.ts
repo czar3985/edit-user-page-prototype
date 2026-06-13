@@ -1,11 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { AsyncPipe, NgIf } from '@angular/common';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { filter, take } from 'rxjs';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { AccessibleLocationsTableComponent } from '../../components/accessible-locations-table/accessible-locations-table.component';
+import { LocationTypeaheadComponent } from '../../components/location-typeahead/location-typeahead.component';
 import { LocationSearchItem, UpdateUserProfileRequest } from '../../models/edit-user-profile.models';
 import { EditUserProfileFacade } from '../../services/edit-user-profile-facade.service';
 
-@Component({ selector: 'app-edit-user-profile-page', templateUrl: './edit-user-profile-page.component.html', styleUrl: './edit-user-profile-page.component.scss', providers: [EditUserProfileFacade] })
+@Component({ selector: 'app-edit-user-profile-page', imports: [NgIf, AsyncPipe, ReactiveFormsModule, MatButtonModule, MatCardModule, MatFormFieldModule, MatInputModule, LocationTypeaheadComponent, AccessibleLocationsTableComponent], templateUrl: './edit-user-profile-page.component.html', styleUrl: './edit-user-profile-page.component.scss', providers: [EditUserProfileFacade] })
 export class EditUserProfilePageComponent implements OnInit {
   readonly state$ = this.facade.state$;
   readonly title$ = this.facade.title$;

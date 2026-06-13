@@ -10,5 +10,5 @@ import { LocationTypeaheadComponent } from './components/location-typeahead/loca
 import { EditUserProfileRoutingModule } from './edit-user-profile-routing.module';
 import { EditUserProfilePageComponent } from './pages/edit-user-profile-page/edit-user-profile-page.component';
 
-@NgModule({ declarations: [EditUserProfilePageComponent], imports: [CommonModule, ReactiveFormsModule, MatButtonModule, MatCardModule, MatFormFieldModule, MatInputModule, LocationTypeaheadComponent, AccessibleLocationsTableComponent, EditUserProfileRoutingModule] })
+@NgModule({ declarations: [], imports: [CommonModule, ReactiveFormsModule, MatButtonModule, MatCardModule, MatFormFieldModule, MatInputModule, LocationTypeaheadComponent, AccessibleLocationsTableComponent, EditUserProfileRoutingModule, EditUserProfilePageComponent] })
 export class EditUserProfileModule {}
